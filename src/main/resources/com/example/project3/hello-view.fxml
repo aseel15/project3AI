@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="652.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project3.HelloController">
+    <children>
+      <Label layoutY="-1.0" prefHeight="60.0" prefWidth="652.0" style="-fx-background-color: #9898ba;" textAlignment="JUSTIFY" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+        <Button layoutX="109.0" layoutY="161.0" mnemonicParsing="false" onAction="#onSpellClicked" style="-fx-background-color: #a97f68; -fx-background-radius: 10;" text="Spell" AnchorPane.leftAnchor="109.0">
+            <font>
+                <Font name="Times New Roman" size="18.0" />
+            </font>
+        </Button>
+        <TextArea fx:id="enterText" layoutX="248.0" layoutY="104.0" prefHeight="178.0" prefWidth="378.0" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="25.600000000000023">
+            <font>
+                <Font name="Arial" size="14.0" />
+            </font>
+        </TextArea>
+        <ListView fx:id="listTopWord" layoutX="20.0" layoutY="340.0" prefHeight="148.0" prefWidth="618.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="13.600000000000023" />
+        <Label layoutX="219.0" layoutY="305.0" prefHeight="34.0" prefWidth="346.0" text="The Top Five Predicted Words:" AnchorPane.leftAnchor="219.0" AnchorPane.rightAnchor="86.60000000000002">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="248.0" layoutY="69.0" prefHeight="34.0" prefWidth="346.0" text="Enter The Text Here:" AnchorPane.leftAnchor="248.0" AnchorPane.rightAnchor="57.60000000000002">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="209.0" layoutY="10.0" text="Predicted Word" textAlignment="JUSTIFY" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="209.0">
+            <font>
+                <Font name="Times New Roman Bold Italic" size="33.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
