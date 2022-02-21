@@ -29,7 +29,7 @@ public class HelloController {
         String[] parts = enteredText.split(" ");
         for (int i = 0; i < parts.length; i++) {
             if (parts[i].equals("#")) {
-                listTopWord.getItems().add("The " + i + " #'s predicted words ");
+                //listTopWord.getItems().add("The " + i + " #'s predicted words ");
                 saveCount.add(i);
                 predictWord(i, parts);
 
@@ -49,7 +49,7 @@ public class HelloController {
                 String[] biGramSplit = st.split(" ");
                 if (biGramSplit[0].equals(parts[count - 1])) {
                     double probability = readCSV.getFreqTwoWords().get(st).getProbability();
-                    System.out.println("the probability = "+probability);
+                    //System.out.println("the probability = "+probability);
                     wordsFromHash.add(new Word(biGramSplit[1], probability));
                     predictedHash.put(biGramSplit[1], new Word(biGramSplit[1], probability));
                 }
@@ -60,11 +60,12 @@ public class HelloController {
             for (String st : readCSV.getFreqThreeWords().keySet()) {
                 String[] splitTriGram = st.split(" ");
                 if ((splitTriGram[0] + " " + splitTriGram[1]).equals(parts[count - 2] + " " + parts[count - 1])) {
-                    System.out.println(st+" "+ readCSV.getFreqThreeWords().get(st).getProbability());
-                    System.out.println("the pro "+splitTriGram[0] + " " + splitTriGram[1]+readCSV.getFreqTwoWords().get(splitTriGram[0] + " " + splitTriGram[1]).getProbability());
+                    //System.out.println(splitTriGram[0]+" "+splitTriGram[1]);
+                   // System.out.println("the pro "+splitTriGram[0] + " " + splitTriGram[1]+readCSV.getFreqTwoWords().get(splitTriGram[0] + " " + splitTriGram[1]).getProbability());
                     double probability = readCSV.getFreqThreeWords().get(st).getProbability() *
                             readCSV.getFreqTwoWords().get(splitTriGram[0] + " " + splitTriGram[1]).getProbability();
-                    System.out.println("the probability = "+probability);
+
+                    //System.out.println("the probability = "+ readCSV.getFreqTwoWords().get(splitTriGram[0] + " " + splitTriGram[1]).getProbability());
                     wordsFromHash.add(new Word(splitTriGram[2], probability));
                     predictedHash.put(splitTriGram[2], new Word(splitTriGram[2], probability));
 

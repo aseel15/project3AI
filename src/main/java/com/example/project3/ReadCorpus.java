@@ -26,9 +26,7 @@ public class ReadCorpus {
 
         //Read multiple files from multiple folders
         if (folder.isDirectory()) {
-
                         for (File fileHere : folder.listFiles()) {
-
                             //call read files method for each file in specific folder
                             readFiles(fileHere);
                         }
